@@ -25,12 +25,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Hi, Submit Button Pressed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Hi, Submit1 Button Pressed", Toast.LENGTH_SHORT).show();
                 String s = editText.getText().toString();
                 int kg = Integer.parseInt(s);
                 double pound = 2.205 * kg;
                 textView.setText("The Corresponding Value in pound is : "+pound);
             }
         });
+    }
+
+    public void calculate(View view){
+        Toast.makeText(MainActivity.this, "Hi, Submit2 Button Pressed", Toast.LENGTH_SHORT).show();
+        String s = editText.getText().toString();
+        int kg = Integer.parseInt(s);
+        double pound = 2.205 * kg;
+        textView.setText("The Corresponding Value in pound is : "+pound);
     }
 }
