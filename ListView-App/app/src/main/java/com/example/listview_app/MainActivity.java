@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
-    String arr[] = {"this is", "item1", "item2"};
+    String []arr = {"item0", "item1", "item2", "item3", "item4", "item5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.listView);
 
-        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arr);
+        //Using Builtin Array Adapter
+//        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arr);
+//        listView.setAdapter(ad);
+
+        // Using Custom Array Adapter
+        KawshikAdapter ad = new KawshikAdapter(this, R.layout.kawshik_layout, arr);
         listView.setAdapter(ad);
     }
 }
