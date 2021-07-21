@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bluetooth-Enable-Discoverability</string>
+    <string name="on_off">ON/OFF</string>
+    <string name="discoverability_on_off">Discoverability ON/OFF</string>
+</resources>
