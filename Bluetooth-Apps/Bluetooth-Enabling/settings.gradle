@@ -1,0 +1,2 @@
+rootProject.name = "Bluetooth-Enabling"
+include ':app'
