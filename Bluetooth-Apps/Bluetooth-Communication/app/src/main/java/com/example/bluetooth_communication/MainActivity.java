@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     ListView lvNewDevices;
     ListView lvPatients;
 
+    ArrayList<String> dataList = new ArrayList<>();
+
 
     // Create a BroadcastReceiver for ACTION_FOUND
     private final BroadcastReceiver mBroadcastReceiver1 = new BroadcastReceiver() {
@@ -247,7 +249,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             String text = intent.getStringExtra("theMessage");
             messages.append(text+"\n");
             incomingMessages.setText(messages);
-            String []arr = {"jacche kichu?", "naki jacche na"};
+            dataList.add(text);
+            String []arr = new String[dataList.size()];
+            for(int i=0; i<dataList.size(); i++){
+                arr[i] = dataList.get(i).toString();
+            }
             ArrayAdapter ad = new ArrayAdapter(context, android.R.layout.simple_list_item_1, arr);
             lvPatients.setAdapter(ad);
         }
