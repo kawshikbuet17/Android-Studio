@@ -20,7 +20,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -40,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     EditText etSend;
 
-    TextView incomingMessages;
-    StringBuilder messages;
+//    TextView incomingMessages;
+//    StringBuilder messages;
 
     private static final UUID MY_UUID_INSECURE =
             UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66");
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public DeviceListAdapter mDeviceListAdapter;
 
     ListView lvNewDevices;
-    ListView lvPatients;
+    ListView lvdataList;
 
     ArrayList<String> dataList = new ArrayList<>();
 
@@ -194,15 +193,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Button btnONOFF = (Button) findViewById(R.id.btnONOFF);
         btnEnableDisable_Discoverable = (Button) findViewById(R.id.btnEnableDisableDiscoverability);
         lvNewDevices = (ListView) findViewById(R.id.lvNewDevices);
-        lvPatients = findViewById(R.id.lvPatients);
+        lvdataList = findViewById(R.id.lvPatients);
         mBTDevices = new ArrayList<>();
 
         btnStartConnection = (Button) findViewById(R.id.btnStartConnection);
         btnSend = (Button) findViewById(R.id.btnSend);
         etSend = (EditText) findViewById(R.id.editText);
 
-        incomingMessages = (TextView) findViewById(R.id.incomingMessages);
-        messages = new StringBuilder();
+//        incomingMessages = (TextView) findViewById(R.id.incomingMessages);
+//        messages = new StringBuilder();
 
         LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver, new IntentFilter("incomingMessage"));
 
@@ -247,15 +246,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         @Override
         public void onReceive(Context context, Intent intent) {
             String text = intent.getStringExtra("theMessage");
-            messages.append(text+"\n");
-            incomingMessages.setText(messages);
+//            messages.append(text+"\n");
+//            incomingMessages.setText(messages);
             dataList.add(text);
             String []arr = new String[dataList.size()];
             for(int i=0; i<dataList.size(); i++){
                 arr[i] = dataList.get(i).toString();
             }
             ArrayAdapter ad = new ArrayAdapter(context, android.R.layout.simple_list_item_1, arr);
-            lvPatients.setAdapter(ad);
+            lvdataList.setAdapter(ad);
         }
     };
 
