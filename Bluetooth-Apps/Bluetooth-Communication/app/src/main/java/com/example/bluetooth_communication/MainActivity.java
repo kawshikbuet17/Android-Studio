@@ -16,11 +16,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public DeviceListAdapter mDeviceListAdapter;
 
     ListView lvNewDevices;
+    ListView lvPatients;
 
 
     // Create a BroadcastReceiver for ACTION_FOUND
@@ -191,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Button btnONOFF = (Button) findViewById(R.id.btnONOFF);
         btnEnableDisable_Discoverable = (Button) findViewById(R.id.btnEnableDisableDiscoverability);
         lvNewDevices = (ListView) findViewById(R.id.lvNewDevices);
+        lvPatients = findViewById(R.id.lvPatients);
         mBTDevices = new ArrayList<>();
 
         btnStartConnection = (Button) findViewById(R.id.btnStartConnection);
@@ -209,6 +211,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         lvNewDevices.setOnItemClickListener(MainActivity.this);
+
 
 
         btnONOFF.setOnClickListener(new View.OnClickListener() {
@@ -244,6 +247,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             String text = intent.getStringExtra("theMessage");
             messages.append(text+"\n");
             incomingMessages.setText(messages);
+            String []arr = {"jacche kichu?", "naki jacche na"};
+            ArrayAdapter ad = new ArrayAdapter(context, android.R.layout.simple_list_item_1, arr);
+            lvPatients.setAdapter(ad);
         }
     };
 
