@@ -10,13 +10,14 @@
         android:id="@+id/btnONOFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:text="@string/on_off"
+        app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/btnEnableDisableDiscoverability"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:onClick="btnEnableDisable_Discoverable"
         android:text="@string/discoverability_on_off"
+        app:backgroundTint="#3F51B5"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnONOFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.347"
@@ -31,14 +33,14 @@
 
     <ListView
         android:id="@+id/lvNewDevices"
-        android:layout_width="374dp"
-        android:layout_height="168dp"
+        android:layout_width="372dp"
+        android:layout_height="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnONOFF"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
         android:id="@+id/btnDiscoverDevices"
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:onClick="btnDiscover"
         android:text="Available Devices"
+        app:backgroundTint="#FFC107"
         app:layout_constraintBottom_toTopOf="@+id/lvNewDevices"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +60,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Connection"
-        app:layout_constraintBottom_toTopOf="@+id/incomingMessages"
+        app:backgroundTint="#534B16"
+        app:iconTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,13 +70,16 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="277dp"
-        android:layout_height="72dp"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
-        android:hint="Edit Text Here"
+        android:hint="write  here"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnSend"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/btnSend"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartConnection" />
 
@@ -79,21 +87,36 @@
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="327dp"
+        android:layout_marginBottom="13dp"
         android:text="Send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.795"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <TextView
-        android:id="@+id/incomingMessages"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStartConnection" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSend">
+
+        <TextView
+            android:id="@+id/incomingMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
