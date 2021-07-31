@@ -28,6 +28,7 @@ All updated Notes and Materials are [here](https://kawshikbuet17.notion.site/And
 
 ## Author
 [Kawshik Kumar Paul](https://kawshikbuet17.github.io)\
-Computer Science and Engineering
-Bangladesh University of Engineering and Technology (BUET)
+Undergrad Student\
+Computer Science and Engineering\
+Bangladesh University of Engineering and Technology (BUET)\
 kawshik.kumar.paul@gmail.com
