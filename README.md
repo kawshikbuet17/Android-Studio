@@ -1,5 +1,5 @@
 # Android Studio
-------------------
+
 ## Language and Tools
 +   Language: `Java`
 +   Tools: `Android Studio 4.2.2`
@@ -25,9 +25,9 @@
 ## Materials
 All updated Notes and Materials are [here](https://kawshikbuet17.notion.site/Android-Studio-660fbae85aa147c5bc7f90e3d949eb3b) 
 
-----------------
+
 ## Author
-[Kawshik Kumar Paul](https://kawshikbuet17.github.io)
+[Kawshik Kumar Paul](https://kawshikbuet17.github.io)\
 Computer Science and Engineering
 Bangladesh University of Engineering and Technology (BUET)
 kawshik.kumar.paul@gmail.com
