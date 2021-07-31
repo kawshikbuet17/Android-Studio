@@ -41,6 +41,26 @@ public class MainActivity extends AppCompatActivity {
             public void onPrepared(MediaPlayer mP) {
                 Toast.makeText(MainActivity.this, "Ready to Play", Toast.LENGTH_SHORT).show();
                 mP.start();
+
+                seekBar.setMax(mediaPlayer.getDuration());
+                seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                        if(fromUser){
+                            mediaPlayer.seekTo(progress);
+                        }
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                    }
+                });
             }
         });
 
