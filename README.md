@@ -1,38 +1,33 @@
 # Android Studio
+------------------
+## Language and Tools
++   Language: `Java`
++   Tools: `Android Studio 4.2.2`
+## Applications
++    ### First Applications
+        1. [My-First-Application](https://github.com/kawshikbuet17/Android-Studio/tree/master/My-First-Application)
+        2. [Unit-Converter-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/Unit-Converter-App)
++    ### Activities and Layouts
+        3. [Scroll-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/Scroll-App)
+        4. [Horizontal-Scroll-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/Horizontal-Scroll-App)
+        5. [Toast-and-Log](https://github.com/kawshikbuet17/Android-Studio/tree/master/Toast-and-Log)
++    ### Multiscreen Apps
+        6. [First-Multiscreen-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/First-Multiscreen-App)
++    ### Working With Intents
+        7. [Implicit-Intent](https://github.com/kawshikbuet17/Android-Studio/tree/master/Implicit-Intents)
++    ### ListView
+        8. [ListView-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/ListView-App)
+        9. [RecyclerView-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/RecyclerView-App)
++    ### Working With Media
+        10. [Media-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/Media-App)
+        11. [Video-App](https://github.com/kawshikbuet17/Android-Studio/tree/master/Video-App)
 
-# Elements Used:
+## Materials
+All updated Notes and Materials are [here](https://kawshikbuet17.notion.site/Android-Studio-660fbae85aa147c5bc7f90e3d949eb3b) 
 
-- Android Studio 4.2.2
-- Pixel 2XL as AVD
-
-# Sources of Learning
-
-## Tutorials
-
-[https://www.youtube.com/watch?v=mXjZQX3UzOs](https://www.youtube.com/watch?v=mXjZQX3UzOs)
-
-Code With Harry Android Development Tutorial 11:43 hrs
-
-## Useful Sources
-
-[Links](https://www.notion.so/d9a624cbf89c4fc08ffa369f56e41e7d)
-
-# My Materials
-
-## Sequence of Learning
-
-[Topic Names and Links](https://www.notion.so/856da4698ccf4293a017b49a1e7a6897)
-
-## GitHub Repository
-
-[GitHub - kawshikbuet17/Android-Studio](https://github.com/kawshikbuet17/Android-Studio)
-
-## My Handbooks
-
-[Notes](https://www.notion.so/fb083062835146108f045d2c43a1d0d8)
-
-# Problem Zone
-
-[Problem Table](https://www.notion.so/367f738a65af4e178c2513ad5341d1a0)
-
-[Problem Solution](https://www.notion.so/1eb41704542045f78280c6b07ace9863)
+----------------
+## Author
+[Kawshik Kumar Paul](https://kawshikbuet17.github.io)
+Computer Science and Engineering
+Bangladesh University of Engineering and Technology (BUET)
+kawshik.kumar.paul@gmail.com
